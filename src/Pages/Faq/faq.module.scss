@@ -1,0 +1,25 @@
+.faq {
+    h2 {
+        margin: 1rem;
+    }
+
+    ol {
+        li{
+            font-weight: 700;
+            margin: .5rem 0;
+        }
+        p {
+            font-weight: 300;
+
+            a{
+                font-weight: 700;
+                color: rgb(41, 41, 253);
+                transition: color .2s ease-in-out;
+            &:hover {
+                color: rgb(86, 86, 255);
+                text-decoration: underline;
+            }
+            }
+        }
+    }
+}

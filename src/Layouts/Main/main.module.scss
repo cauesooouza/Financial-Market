@@ -1,0 +1,15 @@
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    max-width: 1280px;
+    min-height: 500px;
+    margin: 0 auto;
+    padding: 1rem;
+
+    @media screen and (max-width: 1080px) {
+            justify-content: center;
+    }
+}

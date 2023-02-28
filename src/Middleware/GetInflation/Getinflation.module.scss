@@ -1,0 +1,25 @@
+.inflation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    li {
+        list-style: none;
+    }
+
+    h3 {
+        color: #3f3f3f;
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+
+    p:first-child {
+        margin: .5rem 0;
+    }
+
+    p:not(:first-child) {
+        font-size: .8rem;
+        font-weight: 300;
+    }
+}

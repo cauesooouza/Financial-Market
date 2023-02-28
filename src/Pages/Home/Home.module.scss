@@ -1,0 +1,26 @@
+.search {
+    width: 900px;
+    margin: 0 auto;
+    padding: .5rem;
+    background-color: #fdfdfd;
+    border: 2px solid #d3d3d3;
+    border-radius: 1rem;
+    appearance: none;
+    height: fit-content;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+
+    &:focus {
+        border: 2px solid #b5c2ee;
+    }
+}
+
+.stockFinded {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 1rem;
+    gap: .5rem;
+}

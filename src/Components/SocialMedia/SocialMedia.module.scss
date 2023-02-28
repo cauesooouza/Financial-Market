@@ -1,0 +1,14 @@
+.social_medias {
+    display: flex;
+    gap: 1rem;
+
+    a {
+        font-size: 1.2rem;
+        color: inherit;
+        transition: color .5s ease;
+
+        &:hover {
+            color: #000;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.currency {
+    display: flex;
+    width: 100%;
+    margin: 0 1rem;
+    text-align: center;
+    animation: marqueeEffect 60s linear infinite;
+    padding: .5rem 2rem;
+
+    li {
+        position: relative;
+        margin: 0 1.5rem;
+        list-style: none;
+
+        .__cod {
+            font-weight: 700;
+        }
+
+        .__price {
+            line-height: 1.2rem;
+            font-weight: 300;
+        }
+    }
+
+    &:hover {
+        animation-play-state: paused;
+
+        transition:animation-play-state .5s ease;
+    }
+}
+
+@keyframes marqueeEffect {
+    0% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(-122%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}

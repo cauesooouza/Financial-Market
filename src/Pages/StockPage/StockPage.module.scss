@@ -1,0 +1,37 @@
+.showStock {
+    display: flex;
+    align-self: center;
+
+    .__header {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 1rem;
+    }
+
+    .__body {
+        table {
+            border-collapse: collapse;
+            letter-spacing: 1px;
+            width: 100%;
+            table-layout: auto;
+
+            tbody {
+                width: 100%;
+                td,
+                th {
+                    word-wrap: break-word;
+                    border: 1px solid #d3d3d3;
+                    padding: 1rem;
+                }
+
+                th {
+                    background-color: #dde5ff;
+                    color: #4e4e4e;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
