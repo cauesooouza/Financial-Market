@@ -26,21 +26,21 @@ export default function Contact() {
           Financial Market | Contact me
         </title>
       </Helmet>
-      <Main>
+      <Main direction='column'>
         <Content>
           <div className={styles.contact_form}>
-          <Card>
-            <form ref={form} onSubmit={sendEmail} className={styles.contact}>
-              <label>Name <span>*</span></label>
-              <input type="text" name="user_name" maxLength='128' placeholder='Jane Doe' required />
-              <label>Email <span>*</span></label>
-              <input type="email" name="user_email" maxLength='128' placeholder='janedoe@yourprovider.com' required />
-              <label>Message <span>*</span></label>
-              <textarea name="message" required rows='12' 
-              placeholder='talk to me, say something about the whole project' />
-              <input type="submit" value="Send Message" />
-            </form>
-          </Card>
+            <Card>
+              <form ref={form} onSubmit={sendEmail} className={styles.contact}>
+                <label>Name <span>*</span></label>
+                <input type="text" name="user_name" maxLength='128' placeholder='Jane Doe' required />
+                <label>Email <span>*</span></label>
+                <input type="email" name="user_email" maxLength='128' placeholder='janedoe@yourprovider.com' required />
+                <label>Message <span>*</span></label>
+                <textarea name="message" required rows='12'
+                  placeholder='talk to me, say something about the whole project' />
+                <input type="submit" value="Send Message" />
+              </form>
+            </Card>
           </div>
         </Content>
         <SideNav>
