@@ -1,5 +1,5 @@
 .search {
-    width: 900px;
+    min-width: 500px;
     margin: 0 auto;
     padding: .5rem;
     background-color: #fdfdfd;
@@ -14,6 +14,10 @@
 
     &:focus {
         border: 2px solid #b5c2ee;
+    }
+
+    @media only screen and (max-width: 600px) {
+        min-width: 300px;
     }
 }
 

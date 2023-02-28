@@ -8,6 +8,12 @@
         flex-wrap: wrap;
         gap: 1rem;
         margin: 1rem;
+
+        @media screen and (max-width:790px) {
+            h1 {
+                font-size: 1rem;
+            }
+        }
     }
 
     .__body {
@@ -19,6 +25,7 @@
 
             tbody {
                 width: 100%;
+
                 td,
                 th {
                     word-wrap: break-word;
@@ -32,6 +39,63 @@
                     text-transform: uppercase;
                 }
             }
+
+            @media screen and (max-width: 768px) {
+                font-size: .8rem;
+                table-layout: fixed;
+                max-width: 600px;
+                border: 0;
+
+                tr {
+                    display: block;
+
+                    td {
+                        display: block;
+                        text-align: right;
+                    }
+
+                    th {
+                        display: block;
+                        float: left;
+                    }
+                }
+            }
+
+            @media screen and (max-width:620px) {
+                max-width: 540px;
+            }
+
+            @media screen and (max-width:540px) {
+                max-width: 480px;
+            }
+
+            @media screen and (max-width:420px) {
+                max-width: 350px;
+            }
+
+            @media screen and (min-width:1024px) {
+                max-width: 900px;
+            }
+
         }
+
+    }
+}
+button.back_button {
+    padding: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-width: 1px;
+    color: #fff;
+    border-color: #599bb3;
+    font-weight: bold;
+    border-radius: 1rem;
+    box-shadow: 0px 10px 14px -7px #527aff;
+    text-shadow: 0px 1px 0px #3d768a;
+    background: linear-gradient(#7796fc, #285aff);
+    transition: background .5s ease-in-out;
+
+    &:hover {
+        background: linear-gradient(#285aff, #7796fc);
     }
 }

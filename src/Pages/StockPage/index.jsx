@@ -3,15 +3,15 @@ import Content from 'Components/Content';
 import NotFound from 'Pages/NotFound';
 import Main from 'Layouts/Main';
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import styles from './StockPage.module.scss'
 import { formatter } from 'Middleware/Formatter';
 import { Helmet } from 'react-helmet';
 import SideNav from 'Components/Sidenav';
-import GetInflation from 'Middleware/GetInflation';
-import GetSelic from 'Middleware/GetSelic';
 
 export default function StockPage() {
+    const nav = useNavigate();
+
     const [stock, setStock] = useState([]);
     const params = useParams();
 
@@ -29,6 +29,7 @@ export default function StockPage() {
     if (!stock) {
         return <NotFound />
     }
+
     return (
         <>
             <Helmet>
@@ -36,7 +37,7 @@ export default function StockPage() {
                     {`Financial Market | ${stock.map(e => e.longName)}`}
                 </title>
             </Helmet>
-            <Main>
+            <Main direction='column'>
                 <Content>
                     <div className={styles.showStock}>
                         {stock.map((e, index) => (
@@ -84,12 +85,7 @@ export default function StockPage() {
                     </div>
                 </Content>
                 <SideNav>
-                    <Card>
-                        <GetInflation />
-                    </Card>
-                    <Card>
-                        <GetSelic />
-                    </Card>
+                        <button onClick={() => nav(-1)} className={styles.back_button}>back home</button>
                 </SideNav>
             </Main>
         </>
