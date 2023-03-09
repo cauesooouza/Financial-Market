@@ -8,6 +8,7 @@ import styles from './StockPage.module.scss'
 import { formatter } from 'Middleware/Formatter';
 import { Helmet } from 'react-helmet';
 import SideNav from 'Components/Sidenav';
+import Loading from 'Components/Loading';
 
 export default function StockPage() {
     const nav = useNavigate();
@@ -40,7 +41,7 @@ export default function StockPage() {
             <Main direction='column'>
                 <Content>
                     <div className={styles.showStock}>
-                        {stock.map((e, index) => (
+                        {stock === 0 ? <Loading/> : stock.map((e, index) => (
                             <Card key={index}>
                                 <div className={styles.__header}>
                                     <img src={e.logourl}

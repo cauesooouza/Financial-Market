@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { requestSelic } from './requestSelic'
 import styles from './Getselic.module.scss'
+import Loading from 'Components/Loading'
 
 export default function GetSelic() {
     const [data, setData] = useState([])
@@ -12,7 +13,7 @@ export default function GetSelic() {
     return (
         <div className={styles.prime_rate}>
             <h3>Prime rate</h3>
-            {data.map((e, index) => (
+            {data.length === 0 ? <Loading/> : data.map((e, index) => (
                 <li key={index}>
                     <p>
                         {e.value}
