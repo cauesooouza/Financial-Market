@@ -3,8 +3,8 @@ import Main from 'Layouts/Main'
 import Card from 'Components/Card'
 import Content from 'Components/Content'
 import SideNav from 'Components/Sidenav'
-import GetInflation from 'Middleware/GetInflation'
-import GetSelic from 'Middleware/GetSelic'
+// import GetInflation from 'Middleware/GetInflation'
+// import GetSelic from 'Middleware/GetSelic'
 import styles from './Home.module.scss'
 import { getAvailableStocks } from 'Middleware/GetStocks/GetAvailableStocks'
 import ALink from 'Components/ALink'
@@ -45,10 +45,12 @@ export default function Home() {
                 </Content>
                 <SideNav>
                     <Card>
-                        <GetInflation />
+                        SERVICE STOPED
+                        {/* <GetInflation /> */}
                     </Card>
                     <Card>
-                        <GetSelic />
+                    SERVICE STOPED
+                        {/* <GetSelic /> */}
                     </Card>
                 </SideNav>
             </Main>
